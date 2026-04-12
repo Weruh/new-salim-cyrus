@@ -1,0 +1,33 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #360185;
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --border: #eaeaea;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
