@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: "main"  # Ensure this matches your default branch name
+    branches: "main"
 
 permissions:
   contents: read
@@ -20,18 +20,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # We removed the 'cache' line to avoid the error you saw
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
+      - name: Install and Build
+        run: |
+          cd salim_cyrus
+          npm install
+          npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist # Change to 'build' if using Create React App
+          # This must match your build output folder
+          # Use 'dist' if using Vite, 'build' if using Create React App
+          path: ./salim_cyrus/dist 
 
   deploy:
     needs: build_site
