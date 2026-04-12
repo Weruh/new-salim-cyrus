@@ -22,11 +22,12 @@ jobs:
           node-version: 20
 
       - name: Install and Build
+        working-directory: salim_cyrus
         run: |
-          cd salim_cyrus
-          npm install
-          # This ensures Vite is run from within the node_modules/.bin folder
-          npx vite build 
+          # Remove any checked-in Windows node_modules to avoid permission issues on Linux
+          rm -rf node_modules
+          npm ci
+          npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
