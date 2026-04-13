@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { brandConfig } from '../lib/config';
 
 const Navbar = () => {
@@ -20,9 +20,17 @@ const Navbar = () => {
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium tracking-wide md:flex">
           {brandConfig.navLinks.map((link) => (
-            <Link key={link.href} to={link.href} className="transition hover:text-[color:var(--brand)]">
+            <NavLink
+              key={link.href}
+              to={link.href}
+              className={({ isActive }) =>
+                `relative pb-2 transition hover:text-[color:var(--brand)] ${
+                  isActive ? 'border-b-2 border-[color:var(--brand)] text-[color:var(--brand)]' : 'border-b-2 border-transparent'
+                }`
+              }
+            >
               {link.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
         <button
@@ -63,15 +71,15 @@ const Navbar = () => {
           }`}
         />
         <aside
-          className={`absolute right-0 top-0 h-fit max-h-[100dvh] w-1/2 min-w-[220px] max-w-[360px] overflow-y-auto border-l border-[color:var(--border)] bg-[color:var(--bg)] px-4 py-5 shadow-2xl transition-transform duration-300 ease-out ${
+          className={`absolute right-0 top-0 h-[100dvh] w-[100vw] max-w-none overflow-y-auto border-l border-[color:var(--border)] bg-[color:var(--bg)] px-4 py-6 shadow-2xl transition-transform duration-300 ease-out ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="mt-8 flex flex-col gap-1 text-sm font-medium">
+          <div className="mt-8 flex flex-col items-center gap-1 text-sm font-medium">
             <Link
               to="/"
               onClick={() => setOpen(false)}
-              className="mb-2 flex items-center gap-3 rounded-lg border border-[color:var(--border)] px-2 py-2 text-[color:var(--text)]"
+              className="mb-2 flex w-full items-center justify-center gap-3 rounded-lg border border-[color:var(--border)] px-2 py-2 text-center text-[color:var(--text)]"
             >
               <img
                 src="/assets/optimized/brand/salim-cyrus-logo.webp"
@@ -83,14 +91,18 @@ const Navbar = () => {
               <span className="text-sm font-semibold">Home</span>
             </Link>
             {brandConfig.navLinks.map((link) => (
-              <Link
+              <NavLink
                 key={link.href}
                 to={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 text-[color:var(--muted)] transition hover:bg-black/5 hover:text-[color:var(--text)]"
+                className={({ isActive }) =>
+                  `w-full rounded-lg px-2 py-3 text-center text-[color:var(--muted)] transition hover:bg-black/5 hover:text-[color:var(--text)] ${
+                    isActive ? 'border-b-2 border-[color:var(--brand)] text-[color:var(--text)]' : 'border-b-2 border-transparent'
+                  }`
+                }
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
           </div>
         </aside>

@@ -159,7 +159,7 @@ const Coaching = () => (
     <Section>
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="space-y-6">
-          <h2 className="text-3xl font-semibold">Who Itâ€™s For</h2>
+          <h2 className="text-3xl font-semibold">Who It's For</h2>
           <ul className="space-y-4 text-sm leading-relaxed">
             {whoItIsFor.map((item) => (
               <li key={item.label}>
@@ -170,7 +170,7 @@ const Coaching = () => (
           </ul>
         </div>
         <div className="space-y-6">
-          <h2 className="text-3xl font-semibold">Who Itâ€™s Not For</h2>
+          <h2 className="text-3xl font-semibold">Who It's Not For</h2>
           <ul className="space-y-4 text-sm leading-relaxed">
             {whoItIsNotFor.map((item) => (
               <li key={item.label}>

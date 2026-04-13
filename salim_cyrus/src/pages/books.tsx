@@ -37,10 +37,10 @@ const books = [
 ];
 
 const bookCardClasses =
-  'group mx-auto flex w-full max-w-[320px] flex-col gap-5 !rounded-[28px] !p-0 shadow-[0_25px_60px_rgba(13,13,13,0.12)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[color:var(--brand)] hover:shadow-[0_35px_70px_rgba(36,12,64,0.18)]';
+  'group mx-auto flex w-full max-w-[320px] flex-col gap-5 !rounded-none !p-0 shadow-[0_25px_60px_rgba(13,13,13,0.12)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[color:var(--brand)] hover:shadow-[0_35px_70px_rgba(36,12,64,0.18)]';
 
 const bookImageWrapperClasses =
-  'relative h-72 w-full overflow-hidden rounded-t-[28px] border border-[color:var(--border)] bg-white p-3';
+  'relative h-72 w-full overflow-hidden border border-[color:var(--border)] bg-white';
 
 const bookImageClasses =
   'object-cover object-top transition-transform duration-500 ease-out scale-100 group-hover:scale-110';
