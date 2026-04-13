@@ -49,11 +49,42 @@ const coachingPreview = [
   }
 ];
 
+const programHighlights = [
+  {
+    title: 'Identity Reformation Program',
+    text: 'Break false identities and align purpose with execution.',
+    meta: '8-12 weeks',
+    tag: 'Flagship',
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47 (1).jpeg'
+  },
+  {
+    title: 'Kingdom Mentality Masterclass',
+    text: 'Spiritual intelligence plus real-life systems.',
+    meta: 'Monthly membership',
+    tag: 'Subscription',
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47.jpeg'
+  },
+  {
+    title: 'Defining Manhood Bootcamp',
+    text: 'Discipline, leadership, and accountability for men.',
+    meta: 'Men only',
+    tag: 'Bootcamp',
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.50.jpeg'
+  },
+  {
+    title: 'Relationship Intelligence',
+    text: 'Compatibility, communication, and pre-marital clarity.',
+    meta: 'Cohort or private',
+    tag: 'Relationships',
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48 (3).jpeg'
+  }
+];
+
 const coachingCardClasses =
-  'flex flex-col justify-between gap-6 overflow-hidden p-0 transition duration-300 ease-out hover:-translate-y-1 hover:border-[color:var(--brand)] hover:shadow-[0_25px_45px_rgba(36,12,64,0.16)]';
+  'group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-[color:var(--border)] transition duration-300 ease-out hover:-translate-y-1';
 
 const bookCardClasses =
-  'mx-auto flex w-full max-w-[320px] flex-col gap-5 rounded-[28px] p-5 shadow-[0_25px_60px_rgba(13,13,13,0.12)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[color:var(--brand)] hover:shadow-[0_35px_70px_rgba(36,12,64,0.18)]';
+  'group mx-auto flex w-full max-w-[320px] flex-col gap-5 !rounded-none !p-0 shadow-[0_25px_60px_rgba(13,13,13,0.12)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-[color:var(--brand)] hover:shadow-[0_35px_70px_rgba(36,12,64,0.18)]';
 
 const books = [
   {
@@ -159,26 +190,76 @@ const Home = () => (
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {coachingPreview.slice(0, 3).map((item) => (
-            <Card key={item.title} className={coachingCardClasses}>
-              <div className="relative h-[260px] w-full overflow-hidden md:h-[300px]">
+            <div key={item.title} className={coachingCardClasses}>
+              <div className="relative h-[245px] overflow-hidden rounded-t-[14px] md:h-[290px]">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   loading="lazy"
                 />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                <div className="absolute inset-x-5 bottom-5 flex flex-col gap-1 text-white">
+                  <p className="text-[11px] uppercase tracking-[0.35em] text-white/70">{item.meta}</p>
+                  <p className="text-2xl font-semibold leading-tight">{item.title}</p>
+                </div>
               </div>
-              <div className="space-y-3 px-6">
-                <h3 className="text-lg font-semibold text-[color:var(--text)]">{item.title}</h3>
+              <div className="space-y-3 px-6 pb-6 pt-4">
                 <p className="text-sm text-[color:var(--muted)]">{item.text}</p>
-                <p className="text-xs uppercase tracking-[0.4em] text-[color:var(--muted)]">{item.meta}</p>
-              </div>
-              <div className="px-6 pb-6">
                 <Link to="/coaching" className="text-sm font-semibold text-[color:var(--brand)]">
                   Explore
                 </Link>
               </div>
-            </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+
+    <Section className="bg-[color:var(--bg)]">
+      <div className="space-y-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 className="text-3xl font-semibold">Programs Built For Transformation</h2>
+            <p className="mt-2 text-sm text-[color:var(--muted)]">
+              System-first paths that move people from information to formation to transformation.
+            </p>
+          </div>
+          <Button href="/programs" variant="secondary" className="self-start">
+            View All Programs
+          </Button>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {programHighlights.map((program) => (
+            <div
+              key={program.title}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[color:var(--border)] bg-white shadow-sm"
+            >
+              <div className="relative h-[320px] w-full overflow-hidden">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 space-y-2 rounded-xl bg-black/45 p-3 text-white backdrop-blur-[2px]">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-white/80">
+                    {program.meta}
+                  </p>
+                  <h3 className="text-lg font-semibold leading-tight text-white">{program.title}</h3>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 p-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[color:var(--muted)]">
+                  {program.tag}
+                </p>
+                <p className="text-sm text-[color:var(--muted)]">{program.text}</p>
+                <Link to="/programs" className="text-sm font-semibold text-[color:var(--brand)]">
+                  Explore Programs
+                </Link>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -193,20 +274,20 @@ const Home = () => (
         <div className="grid gap-6 justify-center md:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => (
             <Card key={book.title} className={bookCardClasses}>
-              <div className="relative h-72 w-full overflow-hidden rounded-2xl border border-[color:var(--border)] bg-white p-3">
+              <div className="relative h-72 w-full overflow-hidden border border-[color:var(--border)] bg-white">
                 <img
                   src={book.cover}
                   alt={book.title}
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 px-5 pt-5">
                 <h3 className="text-lg font-semibold text-[color:var(--text)]">{book.title}</h3>
                 <p className="text-sm leading-relaxed text-[color:var(--muted)]">{book.description}</p>
               </div>
               {book.buyLink ? (
-                <div className="mt-auto flex items-center justify-center gap-4 pt-2">
+                <div className="mt-auto flex items-center justify-center gap-4 px-5 pb-5 pt-2">
                   <span className="rounded-full bg-[color:var(--brand)] px-4 py-1 text-xs font-semibold uppercase tracking-[0.4em] text-white">
                     {book.price}
                   </span>
@@ -215,7 +296,7 @@ const Home = () => (
                   </Button>
                 </div>
               ) : (
-                <div className="mt-auto flex items-center justify-center pt-1">
+                <div className="mt-auto flex items-center justify-center px-5 pb-5 pt-1">
                   <Button variant="primary" disabled className="cursor-not-allowed opacity-95">
                     Coming Soon
                   </Button>
