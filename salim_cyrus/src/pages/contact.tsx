@@ -154,7 +154,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="relative h-full w-full">
+          <div className="relative hidden h-full w-full lg:block">
             <img
               src="/assets/optimized/images/salim4.webp"
               alt="Salim Cyrus in conversation"

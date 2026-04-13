@@ -16,7 +16,7 @@ const focusPoints = [
   {
     title: 'Rooted in real life',
     description:
-      'Every dialogue I craft is grounded in the messy weekdays my clients actually live in, so the actions we design move with calendars, families, and boardroomsâ€”not around them.'
+      'Every dialogue I craft is grounded in the messy weekdays my clients actually live in, so the actions we design move with calendars, families, and boardrooms—not around them.'
   },
   {
     title: 'Built for clarity',

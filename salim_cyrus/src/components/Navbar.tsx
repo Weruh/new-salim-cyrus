@@ -38,7 +38,7 @@ const Navbar = () => {
           onClick={() => setOpen((prev) => !prev)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
-          className="relative h-10 w-10 rounded-full border border-[color:var(--border)] transition md:hidden"
+          className="relative h-10 w-10 rounded-none border border-[color:var(--border)] transition md:hidden"
         >
           <span
             className={`absolute left-1/2 top-[30%] h-0.5 w-5 -translate-x-1/2 bg-[color:var(--text)] transition-transform duration-300 ${
@@ -75,6 +75,16 @@ const Navbar = () => {
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
+          <div className="flex items-center justify-end">
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="flex h-10 w-10 items-center justify-center rounded-none border border-[color:var(--border)] text-2xl leading-none"
+            >
+              ×
+            </button>
+          </div>
           <div className="mt-8 flex flex-col items-center gap-1 text-sm font-medium">
             <Link
               to="/"

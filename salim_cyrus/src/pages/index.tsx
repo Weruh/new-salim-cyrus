@@ -55,28 +55,32 @@ const programHighlights = [
     text: 'Break false identities and align purpose with execution.',
     meta: '8-12 weeks',
     tag: 'Flagship',
-    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47 (1).jpeg'
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47 (1).jpeg',
+    applyLink: 'https://paystack.shop/pay/jgbl6hhq7v'
   },
   {
     title: 'Kingdom Mentality Masterclass',
     text: 'Spiritual intelligence plus real-life systems.',
     meta: 'Monthly membership',
     tag: 'Subscription',
-    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47.jpeg'
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47.jpeg',
+    applyLink: 'https://paystack.shop/pay/p2j14f4bbo'
   },
   {
     title: 'Defining Manhood Bootcamp',
     text: 'Discipline, leadership, and accountability for men.',
     meta: 'Men only',
     tag: 'Bootcamp',
-    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.50.jpeg'
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.50.jpeg',
+    applyLink: 'https://paystack.shop/pay/997xi94hc4'
   },
   {
     title: 'Relationship Intelligence',
     text: 'Compatibility, communication, and pre-marital clarity.',
     meta: 'Cohort or private',
     tag: 'Relationships',
-    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48 (3).jpeg'
+    image: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48 (3).jpeg',
+    applyLink: 'https://paystack.shop/pay/6v8heotsk5'
   }
 ];
 
@@ -255,9 +259,14 @@ const Home = () => (
                   {program.tag}
                 </p>
                 <p className="text-sm text-[color:var(--muted)]">{program.text}</p>
-                <Link to="/programs" className="text-sm font-semibold text-[color:var(--brand)]">
+                <a
+                  href={program.applyLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-[color:var(--brand)]"
+                >
                   Explore Programs
-                </Link>
+                </a>
               </div>
             </div>
           ))}
