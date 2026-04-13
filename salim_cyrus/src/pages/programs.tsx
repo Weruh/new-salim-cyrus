@@ -10,13 +10,14 @@ const programs = [
     tag: 'Flagship',
     focus: 'Identity, purpose, inner healing',
     summary: 'Flagship transformation track that replaces false identities with purpose and disciplined execution.',
+    applyLink: 'https://paystack.shop/pay/jgbl6hhq7v',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47 (1).jpeg',
       alt: 'Salim Cyrus studio portrait'
     },
     pricing: {
-      local: 'KES 85,000',
-      global: 'USD 650'
+      local: 'KES 25,000',
+      global: 'USD 193'
     },
     steps: [
       'Weeks 1-3: Breaking false identities (culture, trauma, religion)',
@@ -33,13 +34,14 @@ const programs = [
     tag: 'Membership',
     focus: 'Spiritual intelligence plus practical life systems',
     summary: 'Build a community of thinkers who can apply revelation to real life decisions.',
+    applyLink: 'https://paystack.shop/pay/p2j14f4bbo',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.47.jpeg',
       alt: 'Salim Cyrus at a desk in warm light'
     },
     pricing: {
-      local: 'KES 7,500 / month',
-      global: 'USD 59 / month'
+      local: 'KES 2,500 / month',
+      global: 'USD 20 / month'
     },
     steps: [
       'Religion versus revelation',
@@ -55,13 +57,14 @@ const programs = [
     tag: 'Men Only',
     focus: 'Masculinity, discipline, responsibility',
     summary: 'A direct challenge to rebuild strength, accountability, and leadership in men.',
+    applyLink: 'https://paystack.shop/pay/997xi94hc4',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.50.jpeg',
       alt: 'Salim Cyrus in a pink polo'
     },
     pricing: {
       local: 'KES 25,000',
-      global: 'USD 199'
+      global: 'USD 193'
     },
     steps: [
       'Sexual discipline and self-mastery',
@@ -78,13 +81,14 @@ const programs = [
     tag: 'Relationships',
     focus: 'Modern relationships, truth over fantasy',
     summary: 'Build relational clarity with tools that replace confusion with maturity.',
+    applyLink: 'https://paystack.shop/pay/6v8heotsk5',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48 (3).jpeg',
       alt: 'Salim Cyrus speaking in a blue suit'
     },
     pricing: {
-      local: 'KES 30,000',
-      global: 'USD 240'
+      local: 'KES 20,000',
+      global: 'USD 155'
     },
     steps: [
       'Compatibility versus chemistry',
@@ -101,13 +105,14 @@ const programs = [
     tag: 'Execution',
     focus: 'Action, consistency, results',
     summary: 'Turn revelation into consistent action with daily structure and accountability.',
+    applyLink: 'https://paystack.shop/pay/e2i5qf7s4v',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.50 (1).jpeg',
       alt: 'Salim Cyrus speaking at an event'
     },
     pricing: {
-      local: 'KES 18,000',
-      global: 'USD 149'
+      local: 'KES 20,000',
+      global: 'USD 155'
     },
     steps: [
       'Daily structure for mind, body, and spirit',
@@ -124,13 +129,14 @@ const programs = [
     tag: 'Inner Circle',
     focus: 'Proximity, mentorship, exclusivity',
     summary: 'A private container for leaders who want direct access and live case analysis.',
+    applyLink: 'https://paystack.shop/pay/501d4mbx4c',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48.jpeg',
       alt: 'Salim Cyrus in a light blue shirt'
     },
     pricing: {
-      local: 'KES 45,000 / month',
-      global: 'USD 350 / month'
+      local: 'KES 20,000 / month',
+      global: 'USD 155 / month'
     },
     steps: [
       'Weekly private sessions',
@@ -146,13 +152,14 @@ const programs = [
     tag: 'Healing',
     focus: 'Emotional wounds, betrayal, past trauma',
     summary: 'Walk through healing with a clear process that restores trust and self-worth.',
+    applyLink: 'https://paystack.shop/pay/ergo2eagg-',
     image: {
       src: '/assets/program/WhatsApp Image 2026-04-13 at 09.54.48 (1).jpeg',
       alt: 'Salim Cyrus by the ocean'
     },
     pricing: {
-      local: 'KES 40,000',
-      global: 'USD 320'
+      local: 'KES 15,000',
+      global: 'USD 116'
     },
     steps: [
       'Forgiveness as a decision, not a feeling',
@@ -190,7 +197,7 @@ const Programs = () => (
         { label: 'Contact Me', href: '/contact' },
         { label: 'WhatsApp', href: brandConfig.whatsappLink, variant: 'secondary' }
       ]}
-    />
+     />
 
     <Section>
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
@@ -282,7 +289,10 @@ const Programs = () => (
                 </div>
                 <p className="text-sm font-semibold text-[color:var(--text)]">{program.outcome}</p>
                 <div className="flex flex-col gap-2 pt-1 sm:flex-row">
-                  <Button href="/contact" className="w-full text-xs font-semibold uppercase tracking-[0.2em] sm:w-auto">
+                  <Button
+                    href={program.applyLink}
+                    className="w-full text-xs font-semibold uppercase tracking-[0.2em] sm:w-auto"
+                  >
                     Apply
                   </Button>
                   <Button

@@ -11,7 +11,7 @@ const whoItIsFor = [
   },
   {
     label: 'Transitions (career, identity, relationships, purpose)',
-    detail: 'Every meaningful move ripples into your daysâ€”together we map the cost, the gain, and the simplest next action that keeps momentum alive.'
+    detail: 'Every meaningful move ripples into your days—together we map the cost, the gain, and the simplest next action that keeps momentum alive.'
   },
   {
     label: 'Burnout, drift, indecision',
@@ -22,7 +22,7 @@ const whoItIsFor = [
 const whoItIsNotFor = [
   {
     label: 'People looking for motivation, not structure',
-    detail: 'If you want a pep talk instead of a detailed accountability plan, this isnâ€™t the right place.'
+    detail: 'If you want a pep talk instead of a detailed accountability plan, this isn’t the right place.'
   },
   {
     label: 'People unwilling to make decisions',
@@ -109,7 +109,7 @@ const transformationStats = [
 
 const testimonial = {
   quote:
-    'Within four weeks I stopped reacting to the calendar and started running the demands I choseâ€”the accountability kept me honest.',
+    'Within four weeks I stopped reacting to the calendar and started running the demands I chose—the accountability kept me honest.',
   name: 'Selena',
   role: 'VP of Product'
 };
@@ -123,7 +123,7 @@ const faq = [
   {
     question: 'What happens between sessions?',
     answer:
-      'You get a short recap of what changed, a one-line next step, and an â€œaccountability pulseâ€ note via WhatsApp. If something shifts, we re-prioritize together before the next session so momentum doesnâ€™t stall.'
+      'You get a short recap of what changed, a one-line next step, and an “accountability pulse” note via WhatsApp. If something shifts, we re-prioritize together before the next session so momentum doesn’t stall.'
   },
   {
     question: 'Do you offer support outside the scheduled time?',
@@ -138,7 +138,7 @@ const faq = [
   {
     question: 'How do you keep the engagement private?',
     answer:
-      'Sessions and notes live in a private, encrypted space. I never share your identity or story elsewhere, and every follow-up keeps the tone confidentialâ€”no group messaging, no surprise call-outs.'
+      'Sessions and notes live in a private, encrypted space. I never share your identity or story elsewhere, and every follow-up keeps the tone confidential—no group messaging, no surprise call-outs.'
   }
 ];
 
@@ -240,7 +240,7 @@ const Coaching = () => (
       <div className="space-y-6">
         <h2 className="text-3xl font-semibold">Process</h2>
         <p className="text-sm font-semibold uppercase tracking-[0.4em] text-[color:var(--muted)]">
-          Diagnose â†’ Decide â†’ Build â†’ Execute â†’ Review
+          Diagnose → Decide → Build → Execute → Review
         </p>
         <p className="text-sm text-[color:var(--muted)]">
           Every phase follows the same cadence: we diagnose the hidden loop, decide the next defense, build the rituals that guard the new move, execute with weekly accountability, and review before the next session. You also get midweek summaries so follow-through stays visible without needless meetings.
